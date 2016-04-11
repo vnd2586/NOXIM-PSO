@@ -1,0 +1,15 @@
+#GAD output of Scenario 1: Changing the Packet Injection Rate (PIP) and keep the Packet Size min = 2 and max = 10
+set term postscript eps color blacktext "GAD" 24
+set out "GAD_s1.eps"
+set title "Global Average Delay"
+set xlabel "Packet Injection Rate (PIR)"
+#set xrange [0:10]
+set ylabel "Average Latency (Cycles)"
+set key bottom right
+plot "dataout_s1_bf_date070416" using 1:4 title "before PSO" lw 16 lc rgb "blue", \
+"dataout_s1_af_date070416" using 1:4 title "after PSO" lw 10 lc rgb "red"
+set output
+quit
+
+
+

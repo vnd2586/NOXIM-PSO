@@ -1,0 +1,15 @@
+#T: Output of scenario 3
+#Throughput(Flits/cycle/IP)
+set term postscript eps color blacktext "Throughput" 24
+set out "T_s3.eps"
+set title "Throughput (Flits/Cycle/IP)"
+set xlabel "Packet Injection Rate (PIR)"
+#set xrange [0:10]
+set ylabel "Throughpt (Flits/Cycle/IP)"
+set key bottom right
+plot "dataout_s3_bf_date070416" using 1:6 title "before PSO" lw 16 lc rgb "blue", \
+"dataout_s3_af_date070416" using 1:6 title "after PSO" lw 10 lc rgb "red"
+set output
+quit
+
+

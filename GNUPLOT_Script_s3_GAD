@@ -1,0 +1,15 @@
+#GAD output of scenario 3; running the simulation of scenario 1 with packet size best of scenario 2 (Packet size = 16 flits)
+set term postscript eps color blacktext "GAD" 24
+set out "GAD_s3.eps"
+set title "Global Average Delay"
+set xlabel "Packet Injection Rate (PIR)"
+#set xrange [0:10]
+set ylabel "Average Latency (Cycles)"
+set key bottom right
+plot "dataout_s3_bf_date070416" using 1:4 title "before PSO" lw 16 lc rgb "blue", \
+"dataout_s3_af_date070416" using 1:4 title "after PSO" lw 10 lc rgb "red"
+set output
+quit
+
+
+

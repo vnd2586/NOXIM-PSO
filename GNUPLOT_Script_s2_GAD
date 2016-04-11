@@ -1,0 +1,15 @@
+#GAD output of scenario 2: keep pir = 0.015 and changing the Packet Size from 2,4,8,...,1024 flits
+set term postscript eps color blacktext "GAD" 24
+set out "GAD_s2.eps"
+set title "Global Average Delay"
+set xlabel "Packet Size (Flits)"
+#set xrange [0:10]
+set ylabel "Average Latency (Cycles)"
+set key bottom right
+plot "dataout_s2_bf_date070416" using 1:4 title "before PSO" lw 16 lc rgb "blue", \
+"dataout_s2_af_date070416" using 1:4 title "after PSO" lw 10 lc rgb "red"
+set output
+quit
+
+
+

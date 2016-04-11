@@ -1,0 +1,15 @@
+#TP Output of Scenario 1
+#TP: Total Power energy
+set term postscript eps color blacktext "TP" 24
+set out "TP_s4.eps"
+set title "Total Power Energy"
+set xlabel "Packet Size (Flits)"
+#set xrange [0.01:0.1]
+set ylabel "Total Power (J)"
+#set yrange [0:0.000005:0.00001]
+set key bottom right
+plot "dataout_s4_bf_date070416" using 1:8 title "before PSO" lw 16 lc rgb "blue", \
+"dataout_s4_af_date070416" using 1:8 title "after PSO" lw 10 lc rgb "red"
+set output
+quit
+
