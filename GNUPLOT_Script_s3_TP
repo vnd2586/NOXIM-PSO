@@ -8,8 +8,9 @@ set xrange [0.01:0.10]
 #set autoscale
 set ylabel "Total Power (J)"
 set key bottom right
-plot "dataout_s3_bf_date070416" using 1:8 title "before PSO" lw 16 lc rgb "blue", \
-"dataout_s3_af_date070416" using 1:8 title "after PSO" lw 10 lc rgb "red"
+set pointsize 1.5
+plot "dataout_s3_bf_date070416" using 1:8 title "before IDPSO" with points lw 16 lc rgb "blue" pt 5, \
+"dataout_s3_af_date070416" using 1:8 title "after IDPSO" with points lw 16 lc rgb "red" pt 9
 set output
 quit
 

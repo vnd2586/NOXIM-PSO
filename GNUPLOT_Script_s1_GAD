@@ -6,8 +6,9 @@ set xlabel "Packet Injection Rate (PIR)"
 #set xrange [0:10]
 set ylabel "Average Latency (Cycles)"
 set key bottom right
-plot "dataout_s1_bf_date070416" using 1:4 title "before PSO" lw 16 lc rgb "blue", \
-"dataout_s1_af_date070416" using 1:4 title "after PSO" lw 10 lc rgb "red"
+set pointsize 1.5
+plot "dataout_s1_bf_date070416" using 1:4 title "before IDPSO" with points lw 16 lc rgb "blue" pt 5, \
+"dataout_s1_af_date070416" using 1:4 title "after IDPSO" with points lw 16 lc rgb "red" pt 9
 set output
 quit
 
